@@ -1,4 +1,6 @@
 using LIBRERIA_NCL.Data;
+using LIBRERIA_NCL.Data.ervices;
+using LIBRERIA_NCL.Data.Models;
 using LIBRERIA_NCL.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -38,6 +40,8 @@ namespace LIBRERIA_NCL
 
             //Configurar el servicio para que pueda ser usado
             services.AddTransient<BooksService>();
+            services.AddTransient<AuthorsService>();
+            services.AddTransient<PublishersService>();
 
             services.AddSwaggerGen(c =>
             {
@@ -65,7 +69,7 @@ namespace LIBRERIA_NCL
             {
                 endpoints.MapControllers();
             });
-             AppDbInitializer.Seed(app);
+          //   AppDbInitializer.Seed(app);
         }
     }
 }

@@ -14,9 +14,9 @@ namespace LIBRERIA_NCL.Data
             using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
-                if (!context.Book.Any())
+                if (!context.Books.Any())
                 {
-                    context.Book.AddRange(new Books()
+                    context.Books.AddRange(new Books()
                     {
                         Titulo = "1st Book Title",
                         Descripcion = "1st Book Description",
@@ -24,7 +24,6 @@ namespace LIBRERIA_NCL.Data
                         DateRead = DateTime.Now.AddDays(-10),
                         Rate = 4,
                         Genero = "Biography",
-                        Autor = "1st Author",
                         CoverUrl = "https....",
                         DateAdded = DateTime.Now,
                     },
@@ -34,7 +33,6 @@ namespace LIBRERIA_NCL.Data
                         Descripcion = "2nd Book Description",
                         IsRead = true,
                         Genero = "Biography",
-                        Autor = "2nd Author",
                         CoverUrl = "https....",
                         DateAdded = DateTime.Now,
                     });

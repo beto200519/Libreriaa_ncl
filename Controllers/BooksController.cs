@@ -1,4 +1,5 @@
-﻿using LIBRERIA_NCL.Data.Services;
+﻿using LIBRERIA_NCL.Data.ervices;
+using LIBRERIA_NCL.Data.Services;
 using LIBRERIA_NCL.Data.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,10 @@ namespace LIBRERIA_NCL.Controllers
             return Ok(book);
         }
 
-        [HttpPost("add-book")]
+        [HttpPost("add-book-with-authors")]
         public IActionResult AddBook([FromBody] BookVM book)
         {
-            _bookService.AddBook(book);
+            _bookService.AddBookWithAuthors(book);
             return Ok();
         }
 
