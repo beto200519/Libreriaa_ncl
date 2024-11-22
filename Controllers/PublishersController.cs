@@ -27,5 +27,13 @@ namespace LIBRERIA_NCL.Controllers
             var response = _publishersService.GetPublisherData(id);
             return Ok(response);
         }
+        [HttpDelete("delete-publisher-by-id")]
+        public IActionResult DeletePublisherById(int id)
+        {
+            _publishersService.DeletePublisherById(id);
+            return Ok();
+        }
+    
+    
     }
 }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LIBRERIA_NCL.Migrations
 {
-    public partial class NuevosDatos : Migration
+    public partial class NewData : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

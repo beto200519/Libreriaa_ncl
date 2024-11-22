@@ -2,20 +2,7 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "Humanizer.Core/2.8.26": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Humanizer.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.CSharp/4.7.0": {
+      "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -141,27 +128,6 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Design/5.0.17": {
-        "type": "package",
-        "dependencies": {
-          "Humanizer.Core": "2.8.26",
-          "Microsoft.CSharp": "4.7.0",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.17"
-        },
-        "compile": {
-          "lib/netstandard2.1/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props": {}
-        }
-      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.17": {
         "type": "package",
         "dependencies": {
@@ -196,17 +162,8 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/5.0.17": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "5.0.17"
-        },
-        "compile": {
-          "lib/netstandard2.1/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/_._": {}
-        }
+      "Microsoft.EntityFrameworkCore.Tools/9.0.0": {
+        "type": "package"
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
         "type": "package",
@@ -1857,26 +1814,10 @@
     }
   },
   "libraries": {
-    "Humanizer.Core/2.8.26": {
-      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
-      "path": "humanizer.core/2.8.26",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "humanizer.core.2.8.26.nupkg.sha512",
-        "humanizer.core.nuspec",
-        "lib/netstandard1.0/Humanizer.dll",
-        "lib/netstandard1.0/Humanizer.xml",
-        "lib/netstandard2.0/Humanizer.dll",
-        "lib/netstandard2.0/Humanizer.xml",
-        "logo.png"
-      ]
-    },
-    "Microsoft.CSharp/4.7.0": {
-      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
-      "type": "package",
-      "path": "microsoft.csharp/4.7.0",
+      "path": "microsoft.csharp/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1889,7 +1830,6 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
-        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -1899,7 +1839,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.7.0.nupkg.sha512",
+        "microsoft.csharp.4.5.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -2065,21 +2005,6 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Design/5.0.17": {
-      "sha512": "DD6dtl3nK+vVAI7c+ip8Wuu8XX4Ou8n/V+dZjf7qybXDh7h2i/BViVBt6nPoEa0oVC9cW1qHLu3iZiyqfbQTuw==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.design/5.0.17",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props",
-        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll",
-        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.xml",
-        "microsoft.entityframeworkcore.design.5.0.17.nupkg.sha512",
-        "microsoft.entityframeworkcore.design.nuspec"
-      ]
-    },
     "Microsoft.EntityFrameworkCore.Relational/5.0.17": {
       "sha512": "2N0sbvF7LpTCGG/MHV/Hhvn9d5fPJhOYRNUFhJDA4MMDWvi+bCMMHi0voupR2fYb8EzfMm40kPrmIPz9zbDiaw==",
       "type": "package",
@@ -2108,17 +2033,17 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/5.0.17": {
-      "sha512": "Wwo0jkprYU6FIm9a+4b6bGT7OQ8Oehn6nECeveofoygi+DN5ft1DmshidoTn6a/5VPzWbzFhkX1bEeW2xSU2+A==",
+    "Microsoft.EntityFrameworkCore.Tools/9.0.0": {
+      "sha512": "qjw+3/CaWiWnyVblvKHY11rQKH5eHQDSbtxjgxVhxGJrOpmjZ3JxtD0pjwkr4y/ELubsXr6xDfBcRJSkX/9hWQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/5.0.17",
+      "path": "microsoft.entityframeworkcore.tools/9.0.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "lib/netstandard2.1/_._",
-        "microsoft.entityframeworkcore.tools.5.0.17.nupkg.sha512",
+        "docs/PACKAGE.md",
+        "microsoft.entityframeworkcore.tools.9.0.0.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -2126,8 +2051,9 @@
         "tools/EntityFrameworkCore.psm1",
         "tools/about_EntityFrameworkCore.help.txt",
         "tools/init.ps1",
-        "tools/net461/any/ef.exe",
-        "tools/net461/win-x86/ef.exe",
+        "tools/net472/any/ef.exe",
+        "tools/net472/win-arm64/ef.exe",
+        "tools/net472/win-x86/ef.exe",
         "tools/netcoreapp2.0/any/ef.dll",
         "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
@@ -6234,28 +6160,28 @@
     "net5.0": [
       "Microsoft.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rivel\\.nuget\\packages\\": {},
+    "C:\\Users\\Norberto Carrillo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rivel\\source\\repos\\LIBRERIA_NCL\\LIBRERIA_NCL.csproj",
+      "projectUniqueName": "C:\\Users\\Norberto Carrillo\\Source\\Repos\\Libreriaa_ncl\\LIBRERIA_NCL.csproj",
       "projectName": "LIBRERIA_NCL",
-      "projectPath": "C:\\Users\\rivel\\source\\repos\\LIBRERIA_NCL\\LIBRERIA_NCL.csproj",
-      "packagesPath": "C:\\Users\\rivel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rivel\\source\\repos\\LIBRERIA_NCL\\obj\\",
+      "projectPath": "C:\\Users\\Norberto Carrillo\\Source\\Repos\\Libreriaa_ncl\\LIBRERIA_NCL.csproj",
+      "packagesPath": "C:\\Users\\Norberto Carrillo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Norberto Carrillo\\Source\\Repos\\Libreriaa_ncl\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rivel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Norberto Carrillo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6281,8 +6207,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net5.0": {
@@ -6300,7 +6227,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[5.0.17, )"
+            "version": "[9.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -6326,8 +6253,90 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.Data.SqlClient\" 2.0.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-8g2p-5pqh-5jmc",
+      "libraryId": "Microsoft.Data.SqlClient",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.Data.SqlClient\" 2.0.1 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "libraryId": "Microsoft.Data.SqlClient",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.IdentityModel.JsonWebTokens\" 5.6.0 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Newtonsoft.Json\" 10.0.1 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Swashbuckle.AspNetCore.SwaggerUI\" 5.6.3 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-qrmm-w75w-3wpx",
+      "libraryId": "Swashbuckle.AspNetCore.SwaggerUI",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Drawing.Common\" 4.7.0 tiene una vulnerabilidad de gravedad crítica conocida, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+      "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.IdentityModel.Tokens.Jwt\" 5.6.0 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Text.RegularExpressions\" 4.3.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
+      "libraryId": "System.Text.RegularExpressions",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

@@ -21,7 +21,7 @@ namespace LIBRERIA_NCL
 {
     public class Startup
     {
-        public string ConnectionString { get; set; }
+        public string ConnectionString { get; set; } 
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;

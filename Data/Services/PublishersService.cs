@@ -1,6 +1,7 @@
 ﻿using LIBRERIA_NCL.Data.ViewModels;
 using System.Linq;
 using LIBRERIA_NCL.Data.Models;
+using System;
 
 
 namespace LIBRERIA_NCL.Data.Services
@@ -36,6 +37,16 @@ namespace LIBRERIA_NCL.Data.Services
                 }).ToList()
             }).FirstOrDefault();
             return _publisherData;
+        }
+
+        internal void DeletePublisherById(int id)
+        {
+            var _publisher = _context.Publishers.FirstOrDefault(n => n.Id == id);
+            if (_publisher != null)
+            {
+                _context.Publishers.Remove(_publisher);
+                _context.SaveChanges();
+            }
         }
     }
 }

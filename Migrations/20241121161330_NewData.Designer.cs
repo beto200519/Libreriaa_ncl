@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LIBRERIA_NCL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241118074849_NuevosDatos")]
-    partial class NuevosDatos
+    [Migration("20241121161330_NewData")]
+    partial class NewData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
