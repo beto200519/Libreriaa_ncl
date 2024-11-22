@@ -14,7 +14,7 @@ namespace LIBRERIA_NCL.Data.Services
             _context = context;
         }
         //Metodo que nos permite agregar una nueva Editora a la BD
-        public void AddPublisher(PublisherVM publisher)
+        public Publisher AddPublisher(PublisherVM publisher)
         {
             var _publisher = new Publisher()
             {
@@ -22,7 +22,11 @@ namespace LIBRERIA_NCL.Data.Services
             };
             _context.Publishers.Add(_publisher);
             _context.SaveChanges();
+            return _publisher;
         }
+        public Publisher GetPublisherById(int id) => _context.Publishers.FirstOrDefault(x => x.Id == id);
+        
+
 
 
         public PublisherWithBooksAndAuthorsVM GetPublisherData(int publisherId)
